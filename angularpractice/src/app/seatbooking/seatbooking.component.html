@@ -1,0 +1,18 @@
+<div>
+    <div class="container mt-5">
+        <form #f="ngForm">
+          <h4>How many seats you want</h4>
+          <mat-form-field>
+            <mat-label>Select Seats</mat-label>
+            <mat-select name="seat" #select required [ngModel]>
+              <mat-option *ngFor="let no of seats" [value]="no" >
+                {{no}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        <mat-divider></mat-divider>
+        <button mat-raised-button type="button" color="primary" class="my-3" (click)="onSubmit(f)" [disabled]="!f.valid">submit</button> 
+        </form>
+        <app-seatbookinglist class="container mt-5" ></app-seatbookinglist>  
+    </div>
+</div>

@@ -1,0 +1,7 @@
+<div class="coach row mt-5">
+    <div *ngFor="let i of seats" >
+        <div [class]="j>0?color.red:color.gray" *ngFor="let j of i">
+            {{j}}
+        </div>  
+    </div>
+</div>
